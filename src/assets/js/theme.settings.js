@@ -59,7 +59,7 @@
      * @public
      */
     Theme.Defaults = {
-        darkTheme: false,
+        darkTheme: true,
 
         header: 0,
         sidebar: 0,
@@ -136,7 +136,7 @@
             body += '<li class="' + this.options.listItemClass + '">' +
                 '<label for="to' + i + '">' + this.optionList[i].text + '</label>' +
                 '<div class="custom-control custom-checkbox ml-auto">' +
-                '<input type="checkbox" class="custom-control-input" id="to' + i + '" ' + checked + '>' +
+                '<input type="checkbox" class="custom-control-input" id="to' + i + '" ' checked + '>' +
                 '<label class="custom-control-label" for="to' + i + '"></label>' +
                 '</div>' +
                 '</li>';

@@ -1,5 +1,9 @@
-<?php require_once('templets/objects.php'); ?>
-<?php $init->start(); ?>
+<?php require_once('app/view.php'); ?>
+<?php
+$view = new View();
+$obj_lists = $view->objects();
+$obj_lists['init']->start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +27,8 @@
         <span class="text">Loading</span>
     </div>
 </div> -->
-<!-- End | Loading -->
 
+<?php if($view->check_db()==""): ?>
 <!-- Begin | Wrapper [[ Find at scss/framework/base/wrapper/wrapper.scss ]] -->
 <div id="wrapper" data-scrollable="true">
 
@@ -56,7 +60,7 @@
                 <div class="heading">
                     <div class="d-flex flex-wrap align-items-end">
                         <div class="flex-grow-1">
-                            <h4>Top Charts</h4>
+                            <h4>New Release</h4>
                             <p>Listen top chart</p>
                         </div>
                         <a href="songs.html" class="btn btn-sm btn-pill btn-air btn-primary">View All</a>
@@ -2843,5 +2847,12 @@
 
 <!-- Including Script tags    -->
 <?php require_once('templets/tail.php') ?>
+
+<?php else: ?>
+ <?php $msg = $view->check_db(); 
+    echo $msg;
+ ?>
+<?php endif; ?>
+
 </body>
 </html>

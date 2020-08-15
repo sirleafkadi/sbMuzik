@@ -4,6 +4,8 @@
                 <li class="nav-item">
                     <a href="home.html" class="nav-link active"><i class="la la-home"></i><span>Home</span></a>
                 </li>
+
+
                 <li class="nav-item">
                     <a href="genres.html" class="nav-link"><i class="la la-diamond"></i><span>Genres</span></a>
                 </li>

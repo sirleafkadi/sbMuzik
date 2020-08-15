@@ -69,8 +69,8 @@ $obj_lists['init']->start();
                 </div>
                 <!-- New Release -->
                 <div class="carousel-item-5 arrow-pos-3">
-                    
-                 </div>
+                    <?php include'app/views/new_release.php'; ?>
+                </div>
 
             </div>
 
@@ -1344,7 +1344,7 @@ $obj_lists['init']->start();
                                     </ul>
                                 </div>
                             </div>
-                            <a href="javascript:void(0);" class="external" data-audio='{"name": "I Love You Mummy", "artist": "Arebica Luna", "album": "Mummy", "url": "../assets/audio/ringtone-1.mp3", "cover_art_url": "../assets/images/cover/small/1.jpg"}'>
+                            <a href="javascript:void(0);" class="external" data-audio='{"name": "I Love You Mummy", "artist": "Arebica Luna", "album": "Mummy", "url": "dist/assets/audio/ringtone-1.mp3", "cover_art_url": "../assets/images/cover/small/1.jpg"}'>
                                 <img src="../assets/images/cover/large/1.jpg" alt="I Love You Mummy" class="card-img--radius-lg">
                             </a>
                         </div>

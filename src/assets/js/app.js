@@ -27,51 +27,19 @@ $(function () {
 
         //=> Handle app routing when page url change
         appRouting: function () {
-            var $document = $(document);
-            $document.on('click', 'a:not(.load-page):not(.external)', function (e) {
-                e.preventDefault();
-
-                var _this = $(this);
-                var url = _this.attr('href') !== 'undefined' ?  _this.attr('href') : null ;
-                if (url && AppConfig.filterLink(url)) {
-                    AppConfig.ajaxLoading(url);
-                }
-            });
+           
         },
 
         //=> Filter link a page link or not
-        filterLink: function (link) {
-            if(link === null) {
-                return false;
-            } else if(link.substr(0, 1) === '#') {
-                return false;
-            } else if(link.length >= 10 && link.substr(0,10).toLowerCase() === 'javascript') {
-                return false;
-            } else if(link.length < 1) {
-                return false;
-            }
-
-            return true;
+        filterLink: function () {
+         
         },
 
         //=> Ajax loading for html pages
-        ajaxLoading: function (url) {
-            var History = window.history;
-            History.pushState("", "", url);
+        ajaxLoading: function () {
+          
 
-            $.ajax({
-                url: url,
-                context: document.body
-            }).done(function (response) {
-                var content = $('<div>' + response + '</div>');
-                changeTitle(content);
-                replaceImageBanner(content);
-                replaceContent(content);
-                setActiveClass();
-            }).fail(function(jqXHR, textStatus){
-                alert('Something went wrong. Please try again');
-                return false;
-            });
+           
 
             // Change old title with new one
             function changeTitle(newContent) {
@@ -96,13 +64,7 @@ $(function () {
 
             // Set active class on nav link when page url change
             function setActiveClass() {
-                var $navLink = $('#sidebar .nav-link');
-                $navLink.removeClass('active');
-                $navLink.each(function () {
-                    if (url === $(this).attr('href')) {
-                        $(this).addClass('active');
-                    }
-                })
+              
             }
         },
 

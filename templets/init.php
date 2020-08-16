@@ -7,6 +7,7 @@ class Init{
             session_name('username');
             session_start();
             ob_start();
+            $_SESSION['db_msg']="";
         }
 
 

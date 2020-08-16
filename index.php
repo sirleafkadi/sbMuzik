@@ -38,7 +38,7 @@ $obj_lists['init']->start();
         <?php require_once('templets/nav.php'); ?>
     <!-- Begin | Sidebar Footer -->
         <?php require_once('templets/sidebar_footer.php'); ?>
-
+            
     </aside>
 
     <!-- Begin | Page Wrapper [[ Find at scss/framework/base/wrapper/wrapper.scss ]] -->

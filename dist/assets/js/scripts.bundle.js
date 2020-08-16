@@ -239,16 +239,7 @@ $(function () {
 
         //=> Handle app routing when page url change
         appRouting: function () {
-            var $document = $(document);
-            $document.on('click', 'a:not(.load-page):not(.external)', function (e) {
-                e.preventDefault();
-
-                var _this = $(this);
-                var url = _this.attr('href') !== 'undefined' ?  _this.attr('href') : null ;
-                if (url && AppConfig.filterLink(url)) {
-                    AppConfig.ajaxLoading(url);
-                }
-            });
+         
         },
 
         //=> Filter link a page link or not

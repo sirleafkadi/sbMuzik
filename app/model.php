@@ -5,7 +5,7 @@ class Model extends Db{
 static $pdo;
 static $db_msg;
 static $list =array(); 
-
+//////Checking database For Errors
 protected function db_info(){
     static::$list=parent::start_db();
     static::$pdo = static::$list['pdo'];
@@ -18,6 +18,7 @@ protected function db_info(){
      }
 } 
 
+//////////
 
 
 
@@ -30,8 +31,7 @@ protected function db_info(){
 
 
 
-
-
+///////END OF CLASS
 }
 
 ?>

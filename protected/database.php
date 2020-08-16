@@ -7,7 +7,7 @@ protected function start_db(){
 
 try{
     $db_list=array();
-    $pdo = new PDO('mysql: host=localhost; port=3308; dbname=sbmuzik; charset=utf8', 'developer', 'Moneymoney27');
+    $pdo = new PDO('mysql: host=localhost; port=3308; dbname=sbmuzik_db; charset=utf8', 'developer', 'Moneymoney27');
     $pdo->setAttribute(PDO::ATTR_ERRMODE,
     PDO::ERRMODE_EXCEPTION);
     $db_list['pdo']=$pdo;

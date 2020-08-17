@@ -21,7 +21,7 @@
     <!-- Styles -->
     <link href="dist/assets/css/vendors.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="dist/assets/css/styles.bundle.css" rel="stylesheet" type="text/css"/>
-
+    <link rel="stylesheet" href="dist/assets/js/aos.css" type="text/css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">

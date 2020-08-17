@@ -1,5 +1,8 @@
-<div class="custom-card">
-                        <div class="custom-card--img">
+<?php 
+
+ echo' 
+                 <div class="custom-card" >
+                     <div class="custom-card--img">
                             <div class="custom-card--info">
                                 <ul class="custom-card--labels d-flex">
                                     <li><span class="badge badge-pill badge-warning"><i class="la la-star"></i></span></li>
@@ -32,13 +35,17 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="javascript:void(0);" class="external" data-audio='{"name": "I Love You Mummy", "artist": "Arebica Luna", "album": "Mummy", "url": "dist/assets/audio/ringtone-1.mp3", "cover_art_url": "dist/assets/images/cover/small/1.jpg"}'>
-                                <img src="dist/assets/images/cover/large/1.jpg" alt="I Love You Mummy" class="card-img--radius-lg">
+                            <a href="javascript:void(0);" class="external" data-audio=\'{"name": "'.$beat_name.'", "artist": "'.$pro_name.'", "album": "", "url": "dist/assets/audio/'.$beat_name.'.mp3", "cover_art_url": "dist/assets/images/cover/'.$img.'.'.$type.'"}\'>
+                                <img src="dist/assets/images/cover/'.$img.'.'.$type.'" alt="'.$beat_name.'" class="card-img--radius-lg">
                             </a>
                         </div>
                             
                         <a href="song-details.html" class="custom-card--link mt-2">
-                            <h6>I Love You Mummy</h6>
-                            <p>Arebica Luna</p>
+                            <h6>'.$beat_name.'</h6>
+                            <p>'.$category.'</p>
                         </a>
-                    </div>
+                    </div>';
+
+
+
+ ?>                   

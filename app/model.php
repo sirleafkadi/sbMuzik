@@ -18,15 +18,23 @@ protected function db_info(){
      }
 } 
 
-//////////
+////New Release
+
+protected function new_release($sql){
 
 
-
-
-
-
-
-
+try{
+  
+    $row = static::$pdo->query($sql);
+    
+    
+    return $row;
+ }catch(PDOException $e){
+    $_SESSION['db_msg']="<h5 style='color:red'> Database Error <br/>".$e->getMessage()."</h5>";
+    return $_SESSION['db_msg'];
+  }
+//////END////////
+}
 
 
 

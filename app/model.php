@@ -46,6 +46,18 @@ try{
 //////END////////
 }
 
+//////////////////Ajax Request/////////
+
+
+////////Getting PDO object for Ajax Call/////
+
+
+
+public function  get_pdo(){
+        return static::$pdo;
+}
+
+
 
 ///////END OF CLASS
 }

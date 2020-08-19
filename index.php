@@ -81,8 +81,8 @@ $obj_lists['init']->start();
      
 
                
-<div class=" col-lg-4"  > 
-    <select class="">
+<div class=" col-lg-4"   > 
+    <select class="" id="category_box">
       <option class="option" placeholder="Category">Choose Category</option>
      <?php $view->get_cat_view(); ?>
     </select>
@@ -120,93 +120,24 @@ $obj_lists['init']->start();
 
 
  
- <div class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
+    <div class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
                        
-    <div class="section col-lg-6" style="margin-top:2% ">
+        <div class="section col-lg-6" style="margin-top:2% ">
                     <!-- Begin | Tab Content -->
-                    <div class="tab-content" id="songsListContent">
+            <div class="tab-content" id="songsListContent">
                             <!-- Begin | Custom List [[ Find at scss/framework/components/custom-list.scss ]] -->
                             Top Deals
-                            <hr>
-                            <div style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .3);" class="custom-list">
-                             
-                                <!-- Begin | Custom List Item -->
-                                <div  class="custom-list--item">
-                                    <div  class="text-white custom-card--inline">
-                                        <div  class="custom-card--inline-img">
-                                            <img style="margin:0 5px 0 5px  " src="dist/assets/images/cover/default.png" alt="" class="card-img--radius-sm">
-                                        </div>
+                       
 
-                                        <div class="custom-card--inline-desc">
-                                            <p class="text-truncate mb-0">Deep inside</p>
-                                            <p class="text-truncate  font-sm">Pimila Holliwy</p>
-                                        </div>
-                                    </div>
-                                        <div class="custom-card--inline-desc" style="margin-right:1px">
-                                            <p class="text-truncate mb-0">3:30 </p>
-                                            <span class="text-truncate mb-0">97.0 bpm</span>
-                                        </div>
-
-                                     
-                                   
-                                    
-                                    <ul class="custom-card--labels d-flex ml-auto">
-                                        <li class=" dropleft">
-                                            <a href="javascript:void(0);" class="btn btn-icon-only p-0 w-auto h-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i style="color:white" class="la la-ellipsis-h"></i>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li class="dropdown-item">
-                                                    <a href="javascript:void(0);" class="dropdown-link favorite">
-                                                        <i class="la la-heart-o"></i>
-                                                        <span>Favorite</span>
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="javascript:void(0);" class="dropdown-link">
-                                                        <i class="la la-plus"></i>
-                                                        <span>Add to Playlist</span>
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="javascript:void(0);" class="dropdown-link">
-                                                        <i class="la la-download"></i>
-                                                        <span>Download</span>
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="javascript:void(0);" class="dropdown-link">
-                                                        <i class="la la-share-alt"></i>
-                                                        <span>Share</span>
-                                                    </a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="song-details.html" class="dropdown-link">
-                                                        <i class="la la-info-circle"></i>
-                                                        <span>Song Info</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr>
-                                
-
-                                
-                            </div>
-                            <hr>
+                          
       
-                            <!-- End | Custom List -->
-                        </div>
-  
-           
-                    </div>
-                    <!-- End | Tab Content -->
-
-                </div>
-                <!-- End | Section -->
- </div>
+                            
+            </div><!-- End | Tab -->
+        </div> <!-- End | Col -->
+                   
+    </div> <!-- End | Row -->
+               
+</div> <!-- End | Main Container -->
                     
                        
                        

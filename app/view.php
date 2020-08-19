@@ -19,8 +19,8 @@ function __construct(){
 /////////Storing objects of all classes except MVC
 public function objects(){
 $list=array();
-$list['init']=$this->init;
 
+$list['init']=$this->init;
 return $list;
 }
 
@@ -31,6 +31,10 @@ public function check_db(){
     }
 
 
+public function get_ajax__pdo(){
+
+   return parent::get_pdo();
+}
 
 public function get_beats($which){
 ///////////checking Which type to call
@@ -75,11 +79,7 @@ public function get_cat_view(){
          echo $e->getMessage();
     }
    
-
-   ////////END||NEW Release
-
-
- ///////END||GET_BEATS
+///////END||GET_Cat////////////////
 }
 
 

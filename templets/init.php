@@ -1,20 +1,23 @@
 <?php
 
-class Init{
+class Init {
 
     private $beats_query;
     private $category_query;
-
+    private $pdo;
 
 
     function __construct()
     {
+        $cat_id="";
         //////////////Creating objects
         $this->beats_query="select products.*, category.category_name, producers.full_name, images.img_name, images.type from products inner join images on images.product_id=products.product_id
         inner join producers on producers.producer_id= products.producer_id 
         inner join category on products.category_id=category.category_id;";
 
         $this->category_query="select * from category";
+
+        
     }
 
 ////////Get Beats/////
@@ -38,7 +41,10 @@ function get_cat_init(){
             $_SESSION['db_msg']="";
         }
 
+        public function get_pdo(){
 
+            return $this->pdo;
+        }
         private function  redirect($url){
 
             

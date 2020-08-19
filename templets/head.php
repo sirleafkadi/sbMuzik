@@ -8,6 +8,8 @@
     <meta name="keywords" content="music template, music app, music web app, responsive music app, music, themeforest, html music app template, css3, html5">
 
     <title>sbMuzik</title>
+     <!-- Bootstrap -->
+     <link href="dist/assets/js/bootstrap.min.js" rel="stylesheet" type="text/css"/>
 
     <!-- Favicon -->
     <link href="dist/assets/images/logos/favicon.png" rel="icon"/>
@@ -21,6 +23,7 @@
     <!-- Styles -->
     <link href="dist/assets/css/vendors.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="dist/assets/css/styles.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="dist/assets/css/mystyle.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="dist/assets/js/aos.css" type="text/css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">

@@ -49,7 +49,7 @@ $obj_lists['init']->start();
         <!-- End | Header -->
 
         <!-- Page Banner [[ Find at scss/base/core.scss ]] -->
-        <div class="banner bg-home" style="opacity: 0.2" data-aos="fade-right" data-aos-duration="1000"></div>
+        <div class="banner bg-home" data-aos="fade-right" data-aos-duration="1000"></div>
 
         <!-- Begin | Main Container [[ Find at scss/base/core.scss ]] -->
         <div class="main-container" id="appRoute">
@@ -75,56 +75,85 @@ $obj_lists['init']->start();
                 </div>
 
             </div>
+         
+         <br>
+<div  class="row"   >
+     
 
-            <div class="row">
                
-               
-               <div class="section col-xl-7 col-lg-6"> 
-                  <!-- Begin | Line Tabs [[ Find at scss/framework/components/line-tabs.scss ]] -->
-                    <ul class="nav nav-tabs line-tabs line-tabs-primary text-uppercase mb-4" id="songsList" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="true">Recent</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="trending-tab" data-toggle="tab" href="#trending" role="tab" aria-controls="trending" aria-selected="false">Trending</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="international-tab" data-toggle="tab" href="#international" role="tab" aria-controls="international" aria-selected="false">International</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="international-tab" data-toggle="tab" href="#international" role="tab" aria-controls="international" aria-selected="false">International</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="international-tab" data-toggle="tab" href="#international" role="tab" aria-controls="international" aria-selected="false">International</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="international-tab" data-toggle="tab" href="#international" role="tab" aria-controls="international" aria-selected="false">International</a>
-                        </li>
-                    </ul>
-                    <!-- End | Line Tabs -->
+<div class=" col-lg-4"  > 
+    <select class="">
+      <option class="option" placeholder="Category">Choose Category</option>
+     <?php $view->get_cat_view(); ?>
+    </select>
+</div>
 
+
+                 
+<div class=" col-lg-4" > 
+    <select class="">
+        <option class="option">Pages</option>
+        <option class="option">Ketchup</option>
+        <option class="option">Ketchup</option>
+        <option class="option">Relish</option>
+    </select>
+</div>
+
+
+
+<div class=" col-lg-4"  > 
+
+<select class="">
+    <option class="option" disabled>Ketchup</option>
+     <option class="option">Ketchup</option>
+    <option class="option">Relish</option>
+</select>
+  
+</div>
+
+
+
+
+                       
+</div><!--END|| ROW--> 
+ 
+
+
+ 
+ <div class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
+                       
+    <div class="section col-lg-6" style="margin-top:2% ">
                     <!-- Begin | Tab Content -->
-                    <div class="tab-content" id="songsListContent" style="width:50%">
-                        <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+                    <div class="tab-content" id="songsListContent">
                             <!-- Begin | Custom List [[ Find at scss/framework/components/custom-list.scss ]] -->
-                            <div class="custom-list">
+                            Top Deals
+                            <hr>
+                            <div style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .3);" class="custom-list">
+                             
                                 <!-- Begin | Custom List Item -->
-                                <div class="custom-list--item">
-                                    <div class="text-dark custom-card--inline"  >
-                                        <div class="custom-card--inline-img">
-                                            <img src="dist/assets/images/cover/default.png" alt="" class="card-img--radius-sm">
+                                <div  class="custom-list--item">
+                                    <div  class="text-white custom-card--inline">
+                                        <div  class="custom-card--inline-img">
+                                            <img style="margin:0 5px 0 5px  " src="dist/assets/images/cover/default.png" alt="" class="card-img--radius-sm">
                                         </div>
 
                                         <div class="custom-card--inline-desc">
-                                            <p class="text-truncate mb-0">I Love You Mummy</p>
-                                            <p class="text-truncate text-muted font-sm">Arebica Luna</p>
+                                            <p class="text-truncate mb-0">Deep inside</p>
+                                            <p class="text-truncate  font-sm">Pimila Holliwy</p>
                                         </div>
                                     </div>
-                                    <ul class="custom-card--labels d-flex ml-auto" >
-                                        <li><span class="badge badge-pill badge-warning"><i class="la la-star"></i></span></li>
-                                        <li class="dropleft">
+                                        <div class="custom-card--inline-desc" style="margin-right:1px">
+                                            <p class="text-truncate mb-0">3:30 </p>
+                                            <span class="text-truncate mb-0">97.0 bpm</span>
+                                        </div>
+
+                                     
+                                   
+                                    
+                                    <ul class="custom-card--labels d-flex ml-auto">
+                                        <li class=" dropleft">
                                             <a href="javascript:void(0);" class="btn btn-icon-only p-0 w-auto h-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="la la-ellipsis-h"></i>
+                                                <i style="color:white" class="la la-ellipsis-h"></i>
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="dropdown-item">
@@ -161,14 +190,49 @@ $obj_lists['init']->start();
                                         </li>
                                     </ul>
                                 </div>
-                        </div>         <!-- End | Custom List Item -->
+                                <hr>
+                                
+
+                                
+                            </div>
+                            <hr>
+      
+                            <!-- End | Custom List -->
+                        </div>
+  
+           
                     </div>
-                              
+                    <!-- End | Tab Content -->
+
                 </div>
-                  
-            </div><!--END|| ROW-->
+                <!-- End | Section -->
+ </div>
+                    
+                       
+                       
+                       
+          
+            
                 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

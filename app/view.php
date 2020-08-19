@@ -53,9 +53,30 @@ else{ throw new Exception($row); }
  }
 
 }
-////////END||NEW Release
+}
 
+public function get_cat_view(){
+   ///////////checking Which type to call
+  
+      try{
+   /////Calling New release method
+      $row = parent::get_cat_model($this->init->get_cat_init());
+      if( gettype($row)!="string"){
+         
+         foreach($row as $item){
+            $cat_id=$item['category_id'];
+            $cat_name=$item['category_name'];
+               ////////Checking If Beat Is Sold
+            include'app/views/category.php';
+      }
+   }
+   else{ throw new Exception($row); }
+   }catch(Exception $e){
+         echo $e->getMessage();
+    }
+   
 
+   ////////END||NEW Release
 
 
  ///////END||GET_BEATS

@@ -52,7 +52,7 @@ $obj_lists['init']->start();
         <div class="banner bg-home" data-aos="fade-right" data-aos-duration="1000"></div>
 
         <!-- Begin | Main Container [[ Find at scss/base/core.scss ]] -->
-        <div class="main-container" id="appRoute">
+        <div data-aos="flip-up" data-aos-duration="700" class="main-container" id="appRoute">
 
             <!-- Begin | Section [[ Find at scss/base/core.scss ]] -->
             <div class="section">
@@ -68,7 +68,7 @@ $obj_lists['init']->start();
                     <hr>
                 </div>
                 <!-- New Release -->
-                <div class="carousel-item-5 arrow-pos-3"  data-aos="fade-up" data-aos-duration="1500">
+                <div class="carousel-item-5 arrow-pos-3"  >
                     <?php 
                         $view->get_beats('new_release');
                     ?>
@@ -83,7 +83,7 @@ $obj_lists['init']->start();
                
 <div class=" col-lg-4"   > 
     <select class="" id="category_box">
-      <option class="option" placeholder="Category">Choose Category</option>
+      <option class="option" value="0" placeholder="Category">All Categories</option>
      <?php $view->get_cat_view(); ?>
     </select>
 </div>
@@ -99,8 +99,6 @@ $obj_lists['init']->start();
     </select>
 </div>
 
-
-
 <div class=" col-lg-4"  > 
 
 <select class="">
@@ -111,27 +109,18 @@ $obj_lists['init']->start();
   
 </div>
 
-
-
-
-                       
 </div><!--END|| ROW--> 
  
-
-
- 
-    <div class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
+    <div  class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
                        
-        <div class="section col-lg-6" style="margin-top:2% ">
+        <div  class="section col-lg-6" style="margin-top:2% ">
                     <!-- Begin | Tab Content -->
-            <div class="tab-content" id="songsListContent">
-                            <!-- Begin | Custom List [[ Find at scss/framework/components/custom-list.scss ]] -->
-                            Top Deals
-                       
-
-                          
-      
-                            
+                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p >Total Beats: <?php echo $total= $view->get_totalbeats(); ?></p> </div>  
+               
+                  <div class="tab-content " id="songsListContent">
+                    <!-- Category_filter -->
+                   
+                <?php $view->get_all_beats() ?>
             </div><!-- End | Tab -->
         </div> <!-- End | Col -->
                    

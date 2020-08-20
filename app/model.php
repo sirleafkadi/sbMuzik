@@ -46,13 +46,37 @@ try{
 //////END////////
 }
 
-//////////////////Ajax Request/////////
+//////////////////Get All Beats/////////
+
+protected function get_beats($sql){
+   try{
+       $row = static::$pdo->query($sql);
+       return $row;
+    }catch(PDOException $e){
+   
+       $_SESSION['db_msg']="<h5 style='color:red'> Error: can't get beats!  <br/>".$e->getMessage()."</h5>";
+       return $_SESSION['db_msg'];
+       
+     }
+   //////END////////
+   }
+
+   ///////////Get Total
+   protected function get_total_beats($sql){
+      try{
+          $row = static::$pdo->query($sql);
+          return $row;
+       }catch(PDOException $e){
+      
+          $_SESSION['db_msg']="<h5 style='color:red'> Error: can't get total number of beats!  <br/>".$e->getMessage()."</h5>";
+          return $_SESSION['db_msg'];
+          
+        }
+      //////END////////
+      }
 
 
 ////////Getting PDO object for Ajax Call/////
-
-
-
 public function  get_pdo(){
         return static::$pdo;
 }

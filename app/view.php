@@ -82,8 +82,50 @@ public function get_cat_view(){
 ///////END||GET_Cat////////////////
 }
 
+public function get_totalbeats(){
+   ///////////checking Which type to call
+   $total=0;
+   try{
+   /////Calling New release method
+      $row = parent::get_total_beats($this->init->get_total());
+      if( gettype($row)!="string"){
+         
+         foreach($row as $item){
+            ++$total;
+      }
 
+      return $total;
+   }
+   else{ throw new Exception($row); }
+   }catch(Exception $e){
+         echo $e->getMessage();
+    }
+   
+///////END|/////////////////
+}
 
+////////////Get_all_beats////////
+
+public function get_all_beats(){
+  
+      try{
+   /////Calling New release method
+      $row = parent::get_beats($this->init->get_beats());
+      if( gettype($row)!="string"){
+         foreach($row as $item){
+            $name=$item['name']; $pro_name=$item['full_name'];  $pro_name=$item['full_name']; $img=$item['img_name']; 
+            $type=$item['type']; $sold=$item['sold']; $id=$item['product_id']; $category=$item['category_name'];
+               ////////Checking If Beat Is Sold
+            if($sold==false){ include'app/views/beats copy.php';}
+      }
+   }
+   else{ throw new Exception($row); }
+   }catch(Exception $e){
+         echo $e->getMessage();
+    }
+   
+///////END////
+}
 
 
 

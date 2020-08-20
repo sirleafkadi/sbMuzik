@@ -5,7 +5,7 @@ class Init {
     private $beats_query;
     private $category_query;
     private $pdo;
-
+    private $total_query;
 
     function __construct()
     {
@@ -16,7 +16,7 @@ class Init {
         inner join category on products.category_id=category.category_id;";
 
         $this->category_query="select * from category";
-
+        $this->total_query="select name from products";
         
     }
 
@@ -30,6 +30,14 @@ function get_cat_init(){
 
     return $this->category_query;
 }
+
+///////Get categories/////
+function get_total(){
+
+    return $this->total_query;
+}
+
+
 
 
 

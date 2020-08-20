@@ -21,8 +21,10 @@
 /////////////
 
 function category(){
-var file= require('app/views/beats.php');
+
   var cat_id = document.getElementById("category_box").value;
+    
+  // var parent = document.getElementById("songsListContent");
 
 var ajax = new XMLHttpRequest();
 var url="app/ajax_request.php?cat_id="+cat_id;
@@ -35,10 +37,9 @@ ajax.send();
 ajax.onreadystatechange=function(){
   if(this.readyState==4 && this.status==200){
 
-    var data= JSON.parse(this.responseText);
-
-
-
+    // var data= JSON.parse(this.responseText);
+   
+      $("#songsListContent").html(this.responseText);
   }
 
  }

@@ -1,8 +1,8 @@
 
 <?php
-
+//  data-aos="zoom-in" data-aos-duration="700"
 echo' 
-<div  data-aos="zoom-in" data-aos-duration="700"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .3);" class="custom-list">
+<div  data-aos-duration="2200"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .3);" class="custom-list">
                            
                              
                                 <div  class="custom-list--item">

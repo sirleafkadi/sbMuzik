@@ -1,4 +1,6 @@
-$total=0;
+<?php 
+
+  $total=0;
   $result_per_page =4;
   $number_f_pages = ceil($total/$result_per_page);
 
@@ -24,3 +26,6 @@ for( $page=1; $page<=$number_f_pages; $page++){
   echo '<span style="background-color: red" ><a href="index.php?page='.$page.' ">'.$page.'</a> </span>';
 
 }
+
+
+?>

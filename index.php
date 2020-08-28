@@ -1,8 +1,7 @@
-<?php require_once('app/view.php'); ?>
+<?php require_once('app/view.php'); require_once('templets/init.php'); ?>
 <?php
 $view = new View();
-$obj_lists = $view->objects();
-$obj_lists['init']->start();
+start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +61,7 @@ $obj_lists['init']->start();
                         <div class="flex-grow-1">
                             <h4>New Release</h4>
                             <p>Listen top chart</p>
+                           
                         </div>
                         <a href="songs.html" class="btn btn-sm btn-pill btn-air btn-primary">View All</a>
                     </div>
@@ -80,22 +80,23 @@ $obj_lists['init']->start();
 <div  class="row"   >
      
 
-               
+<!-- Sending Categories -->               
 <div class=" col-lg-4"   > 
     <select class="" id="category_box">
-      <option class="option" value="0" placeholder="Category">All Categories</option>
+    <option class="option" value="" placeholder="Category" disabled> Select Categories</option>
+      <option class="option" id="all" value="0" placeholder="Category">All</option>
      <?php $view->get_cat_view(); ?>
     </select>
 </div>
 
 
-                 
+ <!-- Getting num of beats-->               
+                
 <div class=" col-lg-4" > 
-    <select class="">
-        <option class="option">Pages</option>
-        <option class="option">Ketchup</option>
-        <option class="option">Ketchup</option>
-        <option class="option">Relish</option>
+    <select class="" id="num_pages">
+        <!-- num of pages -->
+
+
     </select>
 </div>
 
@@ -113,15 +114,14 @@ $obj_lists['init']->start();
  
     <div  class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
                        
-        <div  class="section col-lg-6" style="margin-top:2% ">
+        <div   class="section col-lg-6" style="margin-top:2% ">
                     <!-- Begin | Tab Content -->
-                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p >Total Beats: <?php echo $total= $view->get_totalbeats(); ?></p> </div>  
+                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p >Total Beats: <span id="totals" style="display:none"></span> <span id="total_beats"><?php echo $view->get_totalbeats(); ?></span></p> </div>  
                
-                  <div class="tab-content " id="songsListContent">
+                  <div  class="tab-content " id="songsListContent">
                     <!-- Category_filter -->
-                   
-                <?php $view->get_all_beats() ?>
-            </div><!-- End | Tab -->
+                        
+                 </div><!-- End | Tab -->
         </div> <!-- End | Col -->
                    
     </div> <!-- End | Row -->

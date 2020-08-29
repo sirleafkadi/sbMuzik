@@ -1,23 +1,21 @@
 <?php 
- 
+ session_start();
 require('../protected/ajax_db.php'); 
  
-$db=new Ajax_db(); $pdo=$db->get_ajax__pdo();?>
+?>
 
 <?php
     
 ////////////Calling Methods////////////
 
-get_beats($pdo);
+get_beats($pdo, $db);
 
-
-
-
+$db=new Ajax_db(); $pdo=$db->get_ajax__pdo();
 
 ///////////////////LIST OF METHODS////////////
 
 ///////////Get Beats//////////
-function get_beats($pdo){
+function get_beats($pdo, $db){
        
         // $cat_id=trim($_GET['cat_id']);
         // $clean = htmlspecialchars($cat_id);
@@ -29,20 +27,43 @@ function get_beats($pdo){
         }
 
         else{
-            $sql="call sbmuzik_db.get_beats()";
-        }
+            $sql="call sbmuzik_db.get_beats();";
+         }
      
-     
+
         $row = $pdo->query($sql);
-         
         foreach($row as $item){
-           
             $name=$item['name']; $pro_name=$item['full_name'];   $img=$item['img_name']; 
             $type=$item['type']; $sold=$item['sold']; $id=$item['product_id']; $category=$item['category_name'];
             include('views/beats.php'); 
         }
-            
+       
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///////////Page Filters//////////

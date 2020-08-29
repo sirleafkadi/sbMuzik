@@ -64,7 +64,7 @@ protected function get_beats($sql){
    ///////////Get Total
    protected function get_total_beats($sql){
       try{
-          $row = static::$pdo->query($sql);
+          $row = static::$pdo->query($sql)->fetchColumn();
           return $row;
        }catch(PDOException $e){
       

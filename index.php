@@ -1,7 +1,9 @@
 <?php require_once('app/view.php'); require_once('templets/init.php'); ?>
 <?php
-$view = new View();
 start();
+$view = new View();
+$_SESSION['view']=$view;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,7 +118,7 @@ start();
                        
         <div   class="section col-lg-6" style="margin-top:2% ">
                     <!-- Begin | Tab Content -->
-                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p >Total Beats: <span id="totals" style="display:none"></span> <span id="total_beats"><?php echo $view->get_totalbeats(); ?></span></p> </div>  
+                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p >Total Beats: <span id="totals" style="display:none"></span> <span id="total_beats"></span></p> </div>  
                
                   <div  class="tab-content " id="songsListContent">
                     <!-- Category_filter -->

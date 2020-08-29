@@ -3,7 +3,6 @@
 require_once('templets/init.php');
 require_once('model.php');
 
-
 class View extends Model{
  /////Creating refernce Member variables
  
@@ -26,7 +25,7 @@ public function check_db(){
 
 
 public function get_ajax__pdo(){
-
+   
    return parent::get_pdo();
 }
 
@@ -79,20 +78,15 @@ public function get_cat_view(){
 ///////END||GET_Cat////////////////
 }
 
-public function get_totalbeats(){
+public function get_totalbeats($sql){
    ///////////checking Which type to call
    $total=0;
    try{
    /////Total Beats
-      $row = parent::get_total_beats("select name from products where products.sold=false ");
+      $row = parent::get_total_beats($sql);
       if( gettype($row)!="string"){
-         
-         foreach($row as $item){
-            ++$total;
+         return $row;
       }
-$_SESSION['total_beats']=$total;
-      return $total;
-   }
    else{ throw new Exception($row); }
    }catch(Exception $e){
          echo $e->getMessage();
@@ -100,45 +94,8 @@ $_SESSION['total_beats']=$total;
    
 }
 
-////////////Get_all_beats////////
 
-public function get_all_beats($filter){
-  
-      try{
-   /////Calling get beats method
-   $pages=1;
-   $total_rows=$this->get_totalbeats();
-   $rows_per_page =2;
-  $offset=($pages-1)*$rows_per_page;
-  $total_pages = ceil($total_rows/$rows_per_page);
-   $row = parent::get_beats("call sbmuzik_db.pigination($offset, $rows_per_page)");
-   $_SESSION['total_rows']=$total_rows;
-   $_SESSION['rows_per_page']=$rows_per_page;
 
-   if( gettype($row)!="string"){
-
-      if($filter==false) {
-         foreach($row as $item){
-            $name=$item['name']; $pro_name=$item['full_name'];  $pro_name=$item['full_name']; $img=$item['img_name']; 
-            $type=$item['type']; $sold=$item['sold']; $id=$item['product_id']; $category=$item['category_name'];
-               ////////Checking If Beat Is Sold
-                if($sold==false){ include'app/views/beats copy.php';}
-                }
-               }
-               elseif($filter){
-
-                   for( $page=1; $page<=$total_pages; $page++){
-                  echo '<option class="option" value="'.$page.'"> <span>Page </span>'.$page.'</option>';
-                }
-            }
-   }
-   else{ throw new Exception($row); }
-   }catch(Exception $e){
-         echo $e->getMessage();
-    }
-   
-///////END////
-}
 
 
 

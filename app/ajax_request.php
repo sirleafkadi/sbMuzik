@@ -1,50 +1,48 @@
 <?php 
  session_start();
 require('../protected/ajax_db.php'); 
- 
 ?>
 
 <?php
-    
+$db=new Ajax_db(); $pdo=$db->get_ajax__pdo();  
 ////////////Calling Methods////////////
 
-get_beats($pdo, $db);
+if( (isset($_GET['get_beats']) ) && ($_GET['get_beats']==true) ){get_beats($pdo);}
 
-$db=new Ajax_db(); $pdo=$db->get_ajax__pdo();
 
 ///////////////////LIST OF METHODS////////////
 
 ///////////Get Beats//////////
-function get_beats($pdo, $db){
+function get_beats($pdo){
        
         // $cat_id=trim($_GET['cat_id']);
         // $clean = htmlspecialchars($cat_id);
-
+    
+            
         if(  isset($_GET['cat_id'])  ){
             $id=$_GET['cat_id'];
-            //////Get Filter Beats/////
-            $sql= "call sbmuzik_db.get_filter_beats($id);";
+            //////choosing sql query/////
+           $sql= "call sbmuzik_db.get_filter_beats($id);";
+           $sql_count= "call sbMuzik_db.count_category($id);";
         }
 
         else{
-            $sql="call sbmuzik_db.get_beats();";
+           $sql="call sbmuzik_db.get_beats();";
+           $sql_count= "call sbMuzik_db.count_all();";
          }
-     
-
+         
+         $total = $pdo->query($sql_count)->fetchColumn();
         $row = $pdo->query($sql);
-        foreach($row as $item){
-            $name=$item['name']; $pro_name=$item['full_name'];   $img=$item['img_name']; 
-            $type=$item['type']; $sold=$item['sold']; $id=$item['product_id']; $category=$item['category_name'];
-            include('views/beats.php'); 
-        }
-       
+        while($item=$row->fetch( PDO::FETCH_ASSOC )){
+            // $name=$item['name']; $pro_name=$item['full_name'];   $img=$item['img_name']; 
+            // $type=$item['type']; $sold=$item['sold']; $id=$item['product_id']; $category=$item['category_name'];
+            // include('views/beats.php'); 
 
-
-
-
-
+            $ray[]=$item;
+          }
+        $ray[]=$total;
+          echo json_encode($ray);
 }
-
 
 
 

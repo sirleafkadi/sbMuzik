@@ -3,7 +3,6 @@
 start();
 $view = new View();
 $_SESSION['view']=$view;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -1715,12 +1714,30 @@ $_SESSION['view']=$view;
 
 <!-- Including Script tags    -->
 <?php require_once('templets/tail.php') ?>
+<!-- <script src="templets/tail.php" type="module"></script> -->
 
 <?php else: ?>
  <?php $msg = $view->check_db(); 
     echo $msg;
  ?>
 <?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

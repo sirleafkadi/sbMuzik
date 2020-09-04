@@ -7,7 +7,7 @@ require('../protected/ajax_db.php');
 $db=new Ajax_db(); $pdo=$db->get_ajax__pdo();  
 ////////////Calling Methods////////////
 
-if( (isset($_GET['get_beats']) ) && ($_GET['get_beats']==true) ){get_beats($pdo);}
+if( isset($_GET['offset'])  ){get_beats($pdo);}
 
 
 ///////////////////LIST OF METHODS////////////
@@ -15,19 +15,19 @@ if( (isset($_GET['get_beats']) ) && ($_GET['get_beats']==true) ){get_beats($pdo)
 ///////////Get Beats//////////
 function get_beats($pdo){
        
-        // $cat_id=trim($_GET['cat_id']);
-        // $clean = htmlspecialchars($cat_id);
-    
+           
+            $offset=$_GET['offset']; 
+            $max=$_GET['max'];
             
         if(  isset($_GET['cat_id'])  ){
             $id=$_GET['cat_id'];
             //////choosing sql query/////
-           $sql= "call sbmuzik_db.get_filter_beats($id);";
+           $sql= "call sbmuzik_db.get_filter_beats($id, $offset, $max);";
            $sql_count= "call sbMuzik_db.count_category($id);";
         }
 
         else{
-           $sql="call sbmuzik_db.get_beats();";
+           $sql="call sbmuzik_db.get_beats( $offset, $max);";
            $sql_count= "call sbMuzik_db.count_all();";
          }
          

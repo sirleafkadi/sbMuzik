@@ -37,7 +37,7 @@ public function get_beats($which){
 if($which=="new_release") {
    try{
 /////Calling New release method
-   $row = parent::new_release("call sbmuzik_db.get_beats();");
+   $row = parent::new_release("call sbmuzik_db.new_release();");
    if( gettype($row)!="string"){
       
       foreach($row as $item){

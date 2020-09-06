@@ -78,11 +78,34 @@ $_SESSION['view']=$view;
             </div>
          
          <br>
-<div  class="row"   >
+         <h4>All Beats</h4>
+         <hr>
+    <div  class="row"  style="border-radius:10px; " >
      
 
-<!-- Sending Categories -->               
-<div class=" col-lg-4"   > 
+<!-- Sending Categories -->  
+
+    <div  class=" col-lg-3" > 
+    <select class="option" id="num_pages">
+    <option class="option" disabled>Select Pages</option>
+        <!-- num of pages -->
+
+
+    </select>
+</div>
+
+<div  class=" col-lg-6"  > 
+
+<form   action="">
+
+     <input  style="border-radius:15px; width:100%" class="form-control" type="search" placeholder="Search.." name="search">
+    
+</form>
+ 
+</div>
+
+
+<div class=" col-lg-3"   > 
     <select class="" id="category_box">
     <option class="option" value="" placeholder="Category" disabled> Select Categories</option>
       <option class="option" id="all" value="0" placeholder="Category">All</option>
@@ -91,49 +114,32 @@ $_SESSION['view']=$view;
 </div>
 
 
- <!-- Getting num of beats-->               
-                
-<div class=" col-lg-4" > 
-    <select class="" id="num_pages">
-        <!-- num of pages -->
-
-
-    </select>
-</div>
-
-<div class=" col-lg-4"  > 
-
-<select class="">
-    <option class="option" disabled>Ketchup</option>
-     <option class="option">Ketchup</option>
-    <option class="option">Relish</option>
-</select>
-  
-</div>
-
-</div><!--END|| ROW--> 
+ <!-- Getting num of beats-->   
+ </div><!--END|| ROW--> 
  
-    <div  class="row" style="color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
+ 
+            <div  class="row" style="  color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
                        
-        <div   class="section col-lg-6" style="margin-top:2% ">
-                    <!-- Begin | Tab Content -->
-                  <div style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p>Total: <span style="color:white" id="total"> </span>  </p> </div>  
+                       <div   class="section col-lg-6" style="margin-top:1%; ">
                
-                  <div  class="tab-content " id="songsListContent">
-                    <!-- Category_filter -->
-                        
-                 </div><!-- End | Tab -->
-        </div> <!-- End | Col -->
-                   
-    </div> <!-- End | Row -->
-               
-</div> <!-- End | Main Container -->
+                                   <!-- Begin | Tab Content -->
+                                 <div  style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p>Total: <span style="color:white" id="total"> </span>  </p> </div>  
+                           
+                                 <div  class="tab-content " id="songsListContent">
+                                   <!-- Category_filter -->
+                                       
+                                </div><!-- End | Tab -->
+                       </div> <!-- End | Col -->
+                                  
+            </div> <!-- End | Row -->
+                              
+         
                     
-                       
+
                        
                        
           
-            
+
                 
         
 

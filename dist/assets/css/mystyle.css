@@ -17,3 +17,7 @@ select{
 
     color:white;
 }
+.form-control:focus{
+    background-color:rgb(44, 25, 80);
+    color:white;
+}

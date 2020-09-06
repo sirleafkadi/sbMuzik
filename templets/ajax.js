@@ -1,7 +1,7 @@
 import {get_beats}  from '../app/views/ajax_views.js';
 
-var total=0;
-var rows_per_page=2;
+
+var rows_per_page=8;
 var total_pages=0;
 var url;
 var show_all=true;
@@ -93,7 +93,7 @@ else{ pages=cur_page;}
 
 offset=(pages-1)*rows_per_page;
 split=cur_url.split("&");
-split[0]+="&offset="+offset+ "&max="+2;
+split[0]+="&offset="+offset+ "&max="+8;
 ajax.open("Get",split[0], true);
 ajax.send();
 

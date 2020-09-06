@@ -4,6 +4,7 @@
 <script src="dist/assets/js/scripts.bundle.js"></script>
 <script src="dist/assets/js/myscript.js"></script>
 <script src="dist/assets/js/aos.js"></script>
+<script src="https://kit.fontawesome.com/c8c143fd1a.js" crossorigin="anonymous"></script>
 
 <script>
   AOS.init();

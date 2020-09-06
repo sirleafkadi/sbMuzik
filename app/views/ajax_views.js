@@ -5,9 +5,9 @@ export function get_beats(name, pro_name, img, type, category){
 
 return `
 
-<div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .3);" class=" pig custom-list">
+<div   data-aos-duration="2000000"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .5); margin-top:30px " class="  custom-list">
                            
-<div  class="custom-list--item">
+<div style="padding:15px" class="custom-list--item">
     <div  class="text-white custom-card--inline">
         <div  class="custom-card--inline-img">
         <a  href="javascript:void(0);" class="external " data-audio='{"name": "${name}", "artist": "${pro_name}", "album": "", "url": "dist/assets/audio/${name}.mp3", "cover_art_url": "dist/assets/images/cover/${img}.${type}"}'>
@@ -69,10 +69,10 @@ return `
         </li>
     </ul>
 </div>
-<hr>
 
 
-</div>`;
+
+</div> <hr>`;
 
 
 

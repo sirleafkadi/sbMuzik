@@ -13,6 +13,8 @@
                     <button type="button" class="btn ion-ios-search"></button>
                     <input type="text" placeholder="Search..." id="searchInput" class="form-control">
 
+                  
+
                     <!-- Begin | Search Card [[ Find at scss/framework/base/search/search.scss ]] -->
                     <div class="search-card" data-scrollable="true">
                         <!-- Begin | Search Result List -->
@@ -196,6 +198,14 @@
 
                 </form>
 
+                <div style="display:none" id="search">
+                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
+                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
+                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
+                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
+
+
+                </div>
                 <!-- Begin | Header Options -->
                 <ul class="header-options d-flex align-items-center">
                     <li>

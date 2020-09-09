@@ -1,3 +1,6 @@
+body{
+    text-decoration:none !important;
+}
 select{
 
     background-color: rgb(117,63,220);
@@ -5,9 +8,6 @@ select{
     width: 100%;
    padding:7px;
    font-size: 17px;
-    
-
-
 }
 .option{
     font-size: 17px;
@@ -17,7 +17,47 @@ select{
 
     color:white;
 }
+.form-control{
+    background-color:rgb(44, 25, 80);
+    color:white;
+}
+
 .form-control:focus{
     background-color:rgb(44, 25, 80);
     color:white;
+}
+
+#search{
+    width:100%;
+
+    position:absolute;
+    top:98%;
+    left:.001%;
+    z-index:200;
+    color:white;
+    background-color:rgb(89, 45, 172);
+    border-radius: 9px;
+    color:white;
+   
+}
+.all{
+    color:white;
+}
+
+/* #searchForm{
+    z-index:300;
+
+} */
+.search_results{
+    border-bottom: 1px grey solid;
+    padding: 1.5% 5%;
+}
+.search_results:hover{
+    border-radius: 9px;
+    width:100%;
+    background-color: rgb(117,63,220);
+}
+
+.all:hover{color:white;
+  transition-duration: 2000px;
 }

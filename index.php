@@ -96,12 +96,10 @@ $_SESSION['view']=$view;
 
 <div  class=" col-lg-6"  > 
 
-<form   action="">
 
-     <input  style="border-radius:15px; width:100%" class="form-control" type="search" placeholder="Search.." name="search">
-    
-</form>
  
+
+
 </div>
 
 

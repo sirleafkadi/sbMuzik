@@ -8,8 +8,8 @@ $(document).ready(function() {
 
         
 
-        if(this.value==""){ $("#search").hide("normal"); }
-        else{  $("#search").show("normal");  }
+        if(this.value==""){ $("#search").hide("slow"); }
+        else{  $("#search").show("3600");  }
       
 
     });
@@ -23,6 +23,6 @@ $(document).ready(function() {
     // if the target of the click isn't the container nor a descendant of the container
     if (!tag.is(e.target) && tag.has(e.target).length === 0) 
     {
-        tag.hide("normal");
+        tag.hide("slow");
     }
 });

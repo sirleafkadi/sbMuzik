@@ -8,7 +8,7 @@ $db=new Ajax_db(); $pdo=$db->get_ajax__pdo();
 ////////////Calling Methods////////////
 
 if( isset($_GET['offset'])  ){get_beats($pdo);}
-
+if( isset($_GET['char'])  ){ live_search($pdo, $_GET['char']); }
 
 ///////////////////LIST OF METHODS////////////
 
@@ -45,8 +45,21 @@ function get_beats($pdo){
 }
 
 
+///////////live_search
+function live_search($pdo, $search){
+  // $search= trim($char);
+  // $search=htmlspecialchars($search);
 
+  $row=$pdo->query("select category_name from category where category_name like '%".$search."%' union select full_name from producers where full_name like '%".$search."%' union select name from products where name like '%".$search."%' ");
 
+  foreach($row as $item){
+
+    if(  isset( $item['category_name']  )  ){echo' <p class="search_results"> <a style="color:white" class="all" href="?get">'.$item['category_name'].'</a></p>';}
+   
+
+  }
+
+}
 
 
 

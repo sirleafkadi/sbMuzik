@@ -199,10 +199,7 @@
                 </form>
 
                 <div style="display:none" id="search">
-                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
-                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
-                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
-                      <p class="search_results"> <a style="color:white" class="all" href="?get"> Ringington 1</a></p>
+
 
 
                 </div>

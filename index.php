@@ -80,56 +80,65 @@ $_SESSION['view']=$view;
          <br>
          <h4>All Beats</h4>
          <hr>
-    <div  class="row"  style="border-radius:10px; " >
-     
-
-<!-- Sending Categories -->  
-
-    <div  class=" col-lg-3" > 
-    <select class="option" id="num_pages">
-    <option class="option" disabled>Select Pages</option>
-        <!-- num of pages -->
-
-
-    </select>
-</div>
-
-<div  class=" col-lg-6"  > 
 
 
  
+<div  class="row"  style=" width:100%; border-radius:25px">
+     
+<div  class="col-lg-8"  style=" margin:0 auto; display:flex; flex-direction:row; border-radius:25px"> 
 
-
-</div>
-
-
-<div class=" col-lg-3"   > 
-    <select class="" id="category_box">
+<select class="" id="category_box">
     <option class="option" value="" placeholder="Category" disabled> Select Categories</option>
       <option class="option" id="all" value="0" placeholder="Category">All</option>
      <?php $view->get_cat_view(); ?>
-    </select>
+ </select>
+
+<select class="option" id="num_pages">
+    <option class="option" disabled>Select Pages</option>
+        <!-- num of pages -->
+</select>
+
+ <select name="" id="sorting">
+ <option class="option"  disabled >Sort</option>
+ <option class="option"  value="default">default</option>
+ <option class="option"  value="order">A-Z</option>
+ <option  class="option"  value="2">New release</option>
+ <option  class="option"  value="free">Free</option>
+ <option  class="option"  value="paid">Paid</option>
+
+ 
+
+
+
+</select>
+
 </div>
 
-
- <!-- Getting num of beats-->   
+<!-- Getting num of beats-->   
  </div><!--END|| ROW--> 
  
  
-            <div  class="row" style="  color:white;background-color:rgba(117,63,220); margin:0 auto; border:1px solid green; width:100%; display:flex; justify-content:center">                
-                       
-                       <div   class="section col-lg-6" style="margin-top:1%; ">
-               
-                                   <!-- Begin | Tab Content -->
-                                 <div  style="display:flex; justify-content:space-between;   margin-top: -1%;  " ><p>Top Deal</p> <p>Total: <span style="color:white" id="total"> </span>  </p> </div>  
-                           
-                                 <div  class="tab-content " id="songsListContent">
-                                   <!-- Category_filter -->
-                                       
-                                </div><!-- End | Tab -->
-                       </div> <!-- End | Col -->
-                                  
-            </div> <!-- End | Row -->
+<div class="row" style=" height: 0" >
+
+<div  class="section col-lg-12" style=" border-radius: 25px;  background-color:rgba(117,63,220); display:flex; justify-content:space-between; margin:0 auto; color:white " >
+<p style="margin: 1% 20%;" >Top Deal</p> <p style="margin: 1% 20%;color:white" >Total: <span  id="total"> </span>  </p>
+ </div> 
+</div>
+
+
+<div  class="row" id="beats_parent" style="max-height:70%;  margin: 0 auto;  color:white; background-color:rgba(117,63,220); width:90%; border-radius: 25px  ">                
+<div     class="section col-lg-6" style=" margin: 3% auto; ">
+    
+
+               <!-- Begin | Tab Content -->
+       
+             <div style=" font-size: 88%; "  class="tab-content" id="songsListContent">
+               <!-- Category_filter -->
+                   
+            </div><!-- End | Tab -->
+</div> <!-- End | Col -->
+
+</div> <!-- End | Row -->
                               
          
                     

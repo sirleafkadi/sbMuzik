@@ -66,3 +66,12 @@ select{
 .all:hover{color:white;
   transition-duration: 2000px;
 }
+
+#beats_parent{
+
+        height:800px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition-duration: 5000px;
+
+}

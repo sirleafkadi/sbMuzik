@@ -5,7 +5,7 @@ export function get_beats(name, pro_name, img, type, category){
 
 return `
 
-<div   data-aos-duration="2000000"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .5); margin-top:30px " class="  custom-list">
+<div   data-aos-duration="2000000"  style=" box-shadow: 5px 5px 10px  rgba( 255, 255, 255, .5); margin-top:2px " class="  custom-list">
                            
 <div style="padding:15px" class="custom-list--item">
     <div  class="text-white custom-card--inline">

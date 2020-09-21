@@ -10,6 +10,7 @@ $db=new Ajax_db(); $pdo=$db->get_ajax__pdo();
 if( isset($_GET['offset'])  ){get_beats($pdo);}
 if( isset($_GET['char'])  ){ live_search($pdo, $_GET['char']); }
 
+
 ///////////////////LIST OF METHODS////////////
 
 ///////////Get Beats//////////
@@ -27,8 +28,12 @@ function get_beats($pdo){
         }
 
         else{
-           $sql="call sbmuzik_db.get_beats( $offset, $max);";
-           $sql_count= "call sbMuzik_db.count_all();";
+
+      if( isset($_GET['sorting']) ) { 
+            $sql="call sbmuzik_db.get_beats( $offset, $max, true, false, true)";
+          }
+      else{ $sql="call sbmuzik_db.get_beats( $offset, $max, true, false, false)";}
+           $sql_count= "call sbMuzik_db.count_all(true, false)";
          }
          
          $total = $pdo->query($sql_count)->fetchColumn();
@@ -60,6 +65,7 @@ function live_search($pdo, $search){
   }
 
 }
+
 
 
 

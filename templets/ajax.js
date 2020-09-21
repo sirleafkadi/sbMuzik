@@ -12,6 +12,9 @@ var cur_page=0;
 var obj;
 var cur_url;
 var split;
+var sort_value;
+var sort_url;
+
 
 /////Execute only after document is loaded
 $(document).ready(function(){
@@ -20,7 +23,9 @@ if(show_all){ category(pages); show_all=false; }///Run Once
 
 $("#category_box").change(category);////Filter results base on category
 $("#num_pages").change(select_pages);////Show pignation for each filtered results
+$("#sorting").change(sort);
 $("#searchInput").keyup(live_search);
+
 
 
 
@@ -62,7 +67,8 @@ ajax.onreadystatechange=function(){
     }      
 
         $("#num_pages").html(p);
-   }
+        // document.getElementById("sorting").value="default";
+      }
 
  }
 ////////END///
@@ -76,7 +82,6 @@ function select_pages(){
 var p="";
 cur_page = document.getElementById("num_pages").value;
 var ajax = new XMLHttpRequest();
-
 if(cur_page=="undefined" || cur_page=="" || cur_page==1){ pages=1;  } 
 else{ pages=cur_page;}
 
@@ -108,6 +113,35 @@ ajax.onreadystatechange=function(){
 
 
 
+ function sort(){
+var p;
+  sort_value=document.getElementById("sorting").value
+  //////Sending
+  var ajax = new XMLHttpRequest();
+  sort_url= cur_url+"&sorting="+sort_value;
+  ajax.open("Get",sort_url, true);
+  ajax.send();
+  
+///////Receiving
+ajax.onreadystatechange=function(){
+if(this.readyState==4 && this.status==200){
+  obj = JSON.parse(this.responseText);
+  
+  for(var i=0; i<obj.length-1; i++){
+    p+=get_beats(obj[i].name, obj[i].full_name, obj[i].img_name, obj[i].type, obj[i].category_name);
+}
+  $("#songsListContent").html(p);
+  $("#total").html( obj[obj.length-1]);
+  
+
+}
+
+}
+
+
+}
+
+
 function live_search(){
 
 //////Sending request
@@ -123,13 +157,7 @@ ajax.send();
 ajax.onreadystatechange=function(){
 
   if(this.readyState==4 && this.status==200){
-
-    // console.log(this.responseText);
-   
       $("#search").html(this.responseText);
- 
-
-
   }
 
 
